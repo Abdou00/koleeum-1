@@ -54,6 +54,7 @@ class Home extends React.Component {
                 <Skills content={this.state.expertises} />
                 <Services content={this.state.services} />
                 <Prestations content={this.state.prestations} />
+                <div><div id='monsitemedia_newsletter_wall'></div></div>
                 <Newsletter content={this.state.newsletter} />
             </div>
           );
