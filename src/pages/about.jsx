@@ -4,6 +4,7 @@ import ABOUT_PAGE_QUERY from "../queries/pages/about";
 import Markdown from 'markdown-to-jsx';
 import RegistrationForm from '../components/registration-form';
 
+
 function About(props) {
     return (
         <Query query={ABOUT_PAGE_QUERY}>

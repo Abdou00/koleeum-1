@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Markdown from 'markdown-to-jsx';
 
 const LoginPage = () => {
+    document.getElementById('monsitemedia_social_wall').classList.remove('show')
     return (
         <div className="login-page fadeIn">
             <div className="container">

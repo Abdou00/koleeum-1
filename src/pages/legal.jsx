@@ -4,6 +4,7 @@ import LEGAL_PAGE_QUERY from "../queries/pages/legal";
 import Markdown from 'markdown-to-jsx';
 
 function Legal(props) {
+    document.getElementById('monsitemedia_social_wall').classList.remove('show')
     return (
         <Query query={LEGAL_PAGE_QUERY}>
             {({ data: { legal } }) => {

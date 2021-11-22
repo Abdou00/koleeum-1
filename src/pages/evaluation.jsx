@@ -60,7 +60,7 @@ class Evaluation extends React.Component {
                                     <h2>Gestion Locative</h2>
                                 </div>
                             </div>
-                            <EvaluationForm type = {this.state.type}/>
+                            <EvaluationForm type={this.state.type}/>
                         </div>
                     </div>
                     );

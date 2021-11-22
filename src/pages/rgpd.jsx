@@ -4,6 +4,7 @@ import RGPD_PAGE_QUERY from "../queries/pages/rgpd";
 import Markdown from 'markdown-to-jsx';
 
 function Rgpd(props) {
+    document.getElementById('monsitemedia_social_wall').classList.remove('show')
     return (
         <Query query={RGPD_PAGE_QUERY}>
             {({ data: { rgpd } }) => {

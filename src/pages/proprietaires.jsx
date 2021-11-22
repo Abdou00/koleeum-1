@@ -9,6 +9,7 @@ import Markdown from 'markdown-to-jsx';
 import RegistrationForm from '../components/registration-form';
 
 function Proprietaires(props) {
+    document.getElementById('monsitemedia_social_wall').classList.remove('show')
     return (
         <Query query={PROPRIETAIRES_PAGE_QUERY}>
             {({ data: { proprietaire } }) => {

@@ -1,6 +1,6 @@
 #wesh {
     .morray {
-        display: none;
+        display: block;
     } 
 }
 
@@ -677,7 +677,7 @@ body {
     }
 
     .newsletter {
-        margin-top: 90px;
+        margin-top: 2500px;
         margin-bottom: 90px;
         padding: 30px 0;
         display: flex;
@@ -1342,9 +1342,18 @@ body {
                     .card-thumbnail {
                         display: flex;
                         justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        position: relative;
+                        height: 350px;
+
                         img {
+                            min-width: 100%;
+                            // max-width: 100%;
+                            min-height: 100%;
+                            height: 100%;
                             width: auto;
-                            height: 300px;
+                            position: absolute;
                         }
                     }
 
@@ -1815,7 +1824,39 @@ body {
     }
 }
 
+#monsitemedia_social_wall {
+    display: none;
+    position: relative;
 
+    &.show {
+        display: flex;
+        justify-content: center;
+
+        & > .widget-wrapper {
+            position: absolute;
+            bottom: 900px;
+            font-family: 'Montserrat', sans-serif;
+
+            a {
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            .pagination {
+                em {
+                    background-color: #fff;
+                    border: 0px;
+                    font-weight: bold;
+                    color: #4270ED;
+                }
+
+                a {
+                    border: 0px;
+                }
+
+            }
+        }
+    }
+}
 
 .CookieConsent {
     display: flex;
@@ -1837,6 +1878,16 @@ body {
 
 @media screen and (max-width:425px) {
 
+    #monsitemedia_social_wall {
+    
+        &.show {
+
+            & > .widget-wrapper {
+                bottom: 1700px;
+            }
+        }
+    }
+
     .App {
         overflow-x: hidden;
         padding-left: 0px;
@@ -1848,7 +1899,7 @@ body {
             justify-content: center;
             padding: 15px;
             background-color: #FFF;
-            width: calc(100% - 30px);
+            width: 100vw;
             box-shadow: 5px 5px 15px #00000010;
     
             .container {
@@ -2163,6 +2214,7 @@ body {
             }
 
             .newsletter {
+                margin-top: 5000px;
                 .container {
                     width: calc(100% - 30px);
                     padding: 30px 15px;

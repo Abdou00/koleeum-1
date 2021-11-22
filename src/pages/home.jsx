@@ -38,6 +38,8 @@ class Home extends React.Component {
               });
             }
           )
+
+          document.getElementById('monsitemedia_social_wall').classList.add('show')
     }
 
     render() {
