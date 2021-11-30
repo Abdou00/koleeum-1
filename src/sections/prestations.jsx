@@ -17,6 +17,7 @@ class Prestations extends React.Component {
         console.log(this.state.content)
 
       return (
+          <>
             <div className="prestations">
               <div className="container">
                     <div className="image">
@@ -43,7 +44,9 @@ class Prestations extends React.Component {
                 
               </div>
             </div>
-          )
+            <h2 className="title-actu">Actualité</h2>
+          </>
+        )
     }
 }
 
