@@ -1653,6 +1653,9 @@ body {
   display: flex;
   flex-direction: row;
 }
+.CookieConsent p, .CookieConsent a {
+  font-size: 16px;
+}
 .CookieConsent > div:first-of-type {
   display: flex;
   flex-direction: row;

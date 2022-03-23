@@ -1972,6 +1972,10 @@ body {
     display: flex;
     flex-direction: row;
 
+    p, a {
+        font-size: 16px;
+    }
+
     & > div:first-of-type {
         display: flex;
         flex-direction: row;

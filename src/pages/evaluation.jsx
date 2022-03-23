@@ -9,8 +9,8 @@ class Evaluation extends React.Component {
         super(props)
 
         this.state = {
-          error: null,
-          type:''
+            error: null,
+            type:''
         }
 
         this.handleClick = this.handleClick.bind(this);
@@ -33,7 +33,6 @@ class Evaluation extends React.Component {
         // } else {
         //     document.querySelector('#evaluationType').value = 'Gestion Locative'
         // }
-      
     }
     
 

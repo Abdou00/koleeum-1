@@ -4,7 +4,7 @@ import PROPRIETAIRES_PAGE_QUERY from "../queries/pages/proprietaires";
 import {
     BrowserRouter as Router,
     Link
-  } from "react-router-dom";
+} from "react-router-dom";
 import Markdown from 'markdown-to-jsx';
 import RegistrationForm from '../components/registration-form';
 
