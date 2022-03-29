@@ -10,7 +10,6 @@ const resetForm = () => {
       form.querySelectorAll('input').forEach(element => element.value = '')
       form.querySelector('textarea').value = ''
     }, 500)
-    console.log('resetForm')
 }
 
 const validationSchema = yup.object().shape({
@@ -44,7 +43,7 @@ const ContactForm = () => (
       validationSchema={validationSchema}
       onSubmit={async (values, { setSubmitting, setErrors }) => {
         await sleep(500);
-        console.log(JSON.stringify(values, null, 2));
+
         fetch('https://koleeum-admin.herokuapp.com/messages', {
             method: 'POST',
             headers: {
@@ -58,8 +57,7 @@ const ContactForm = () => (
 
             }),
         })
-        .then(response => response.json())
-        .then(data => console.log(data));
+        .then(response => response.json());
         // emailNotification()
         resetForm()
       }}

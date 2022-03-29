@@ -19,10 +19,7 @@ class Footer extends React.Component {
 
   
     render() {
-
-        console.log(this.state.footerInfo)
-
-        return (
+      return (
           <footer className="footer">
             <div key={0} className="container">
               <div className="logo">

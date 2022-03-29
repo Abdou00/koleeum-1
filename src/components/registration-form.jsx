@@ -9,7 +9,6 @@ const resetForm = () => {
     setTimeout(() => {
       form.querySelectorAll('input').forEach(element => element.value = '')
     }, 500)
-    console.log('resetForm')
 }
 
 const validationSchema = yup.object().shape({
@@ -31,7 +30,7 @@ const RegistrationForm = () => (
       validationSchema={validationSchema}
       onSubmit={async (values, { setSubmitting, setErrors }) => {
         await sleep(500);
-        console.log(JSON.stringify(values, null, 2));
+
         fetch('https://koleeum-admin.herokuapp.com/registrations', {
             method: 'POST',
             headers: {
@@ -43,8 +42,7 @@ const RegistrationForm = () => (
 
             }),
         })
-        .then(response => response.json())
-        .then(data => console.log(data));
+        .then(response => response.json());
 
         resetForm()
       }}

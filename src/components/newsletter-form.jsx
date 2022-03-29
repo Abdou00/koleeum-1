@@ -3,13 +3,11 @@ import { Formik, Field, Form } from 'formik';
 import * as yup from 'yup';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
 const resetForm = () => {
     const form = document.getElementById('NewsletterForm')
     setTimeout(() => {
       form.querySelectorAll('input').forEach(element => element.value = '')
     }, 500)
-    console.log('resetForm')
 }
 
 const validationSchema = yup.object().shape({
@@ -27,7 +25,7 @@ const NewsletterForm = () => (
       validationSchema={validationSchema}
       onSubmit={async (values, { setSubmitting, setErrors }) => {
         await sleep(500);
-        console.log(JSON.stringify(values, null, 2));
+
         fetch('https://koleeum-admin.herokuapp.com/newsletters', {
             method: 'POST',
             headers: {
@@ -38,8 +36,7 @@ const NewsletterForm = () => (
 
             }),
         })
-        .then(response => response.json())
-        .then(data => console.log(data));
+        .then(response => response.json());
 
         resetForm()
       }}

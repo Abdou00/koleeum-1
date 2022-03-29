@@ -1,11 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-// function handleClick(e) {
-//     e.preventDefault();
-//     console.log('Le lien a été cliqué.')
-// }
-
 class Header extends React.Component {
     constructor(props) {
       super(props);
@@ -13,14 +8,11 @@ class Header extends React.Component {
         error: null,
         toggleOpen: false
       };
-
       // Cette liaison est nécéssaire afin de permettre
       // l'utilisation de `this` dans la fonction de rappel.
       this.handleClick = this.handleClick.bind(this);
       this.linkClick = this.linkClick.bind(this);
     }
-
-    
 
     handleClick() {
       this.setState(state => ({
@@ -38,7 +30,6 @@ class Header extends React.Component {
     }
   
     render() {
-
         return (
           <header className="header">
             <div className="container">
